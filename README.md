@@ -1,4 +1,4 @@
-## SDGs Tag Posts
+## SDGs Fragment Posts
 
 - Select from SDGs icons
 - Add comment
