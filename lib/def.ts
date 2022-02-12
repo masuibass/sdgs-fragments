@@ -1,93 +1,117 @@
 type SDGsIcon = {
+  id: number;
   path: string;
   color: string;
   alt: string;
 };
 
-export const sdg_icons: { [key: number]: SDGsIcon } = {
-  1: {
-    path: "/sdg_icons/sdg_icon_01.png",
-    color: "#e5243b",
+export const sdg_icons: SDGsIcon[] = [
+  {
+    id: 0,
+    path: "/sdg_icons/sdgs_icon_wheel.svg",
+    color: "#009EDB",
+    alt: "SDGsロゴ",
+  },
+  {
+    id: 1,
+    path: "/sdg_icons/sdgs_icon_01.svg",
+    color: "#E4011E",
     alt: "貧困をなくそう",
   },
-  2: {
-    path: "/sdg_icons/sdg_icon_02.png",
-    color: "#DDA63A",
+  {
+    id: 2,
+    path: "/sdg_icons/sdgs_icon_02.svg",
+    color: "#D6A600",
     alt: "飢餓をゼロに",
   },
-  3: {
-    path: "/sdg_icons/sdg_icon_03.png",
-    color: "#4C9F38",
+  {
+    id: 3,
+    path: "/sdg_icons/sdgs_icon_03.svg",
+    color: "#1B973B",
     alt: "すべての人に健康と福祉を",
   },
-  4: {
-    path: "/sdg_icons/sdg_icon_04.png",
-    color: "#C5192D",
+  {
+    id: 4,
+    path: "/sdg_icons/sdgs_icon_04.svg",
+    color: "#C60E28",
     alt: "質の高い教育をみんなに",
   },
-  5: {
-    path: "/sdg_icons/sdg_icon_05.png",
-    color: "#FF3A21",
+  {
+    id: 5,
+    path: "/sdg_icons/sdgs_icon_05.svg",
+    color: "#E83418",
     alt: "ジェンダー平等を実現しよう",
   },
-  6: {
-    path: "/sdg_icons/sdg_icon_06.png",
-    color: "#26BDE2",
+  {
+    id: 6,
+    path: "/sdg_icons/sdgs_icon_06.svg",
+    color: "#00A6D9",
     alt: "安全な水とトイレを世界中に",
   },
-  7: {
-    path: "/sdg_icons/sdg_icon_07.png",
-    color: "#FCC30B",
+  {
+    id: 7,
+    path: "/sdg_icons/sdgs_icon_07.svg",
+    color: "#FABE01",
     alt: "エネルギーをみんなに そしてクリーンに",
   },
-  8: {
-    path: "/sdg_icons/sdg_icon_08.png",
-    color: "#A21942",
+  {
+    id: 8,
+    path: "/sdg_icons/sdgs_icon_08.svg",
+    color: "#970B31",
     alt: "働きがいも 経済成長も",
   },
-  9: {
-    path: "/sdg_icons/sdg_icon_09.png",
-    color: "#FD6925",
+  {
+    id: 9,
+    path: "/sdg_icons/sdgs_icon_09.svg",
+    color: "#EC6B07",
     alt: "産業と技術革新の基盤をつくろう",
   },
-  10: {
-    path: "/sdg_icons/sdg_icon_10.png",
-    color: "#DD1367",
+  {
+    id: 10,
+    path: "/sdg_icons/sdgs_icon_10.svg",
+    color: "#DD087B",
     alt: "人や国の不平等をなくそう",
   },
-  11: {
-    path: "/sdg_icons/sdg_icon_11.png",
-    color: "#FD9D24",
+  {
+    id: 11,
+    path: "/sdg_icons/sdgs_icon_11.svg",
+    color: "#F5A30B",
     alt: "住み続けられるまちづくりを",
   },
-  12: {
-    path: "/sdg_icons/sdg_icon_12.png",
-    color: "#BF8B2E",
+  {
+    id: 12,
+    path: "/sdg_icons/sdgs_icon_12.svg",
+    color: "#D29206",
     alt: "つくる責任 つかう責任",
   },
-  13: {
-    path: "/sdg_icons/sdg_icon_13.png",
-    color: "#3F7E44",
+  {
+    id: 13,
+    path: "/sdg_icons/sdgs_icon_13.svg",
+    color: "#417936",
     alt: "気候変動に具体的な対策を",
   },
-  14: {
-    path: "/sdg_icons/sdg_icon_14.png",
-    color: "#0A97D9",
+  {
+    id: 14,
+    path: "/sdg_icons/sdgs_icon_14.svg",
+    color: "#0075B8",
     alt: "海の豊かさを守ろう",
   },
-  15: {
-    path: "/sdg_icons/sdg_icon_15.png",
-    color: "#56C02B",
+  {
+    id: 15,
+    path: "/sdg_icons/sdgs_icon_15.svg",
+    color: "#29A839",
     alt: "陸の豊かさも守ろう",
   },
-  16: {
-    path: "/sdg_icons/sdg_icon_16.png",
-    color: "#00689D",
+  {
+    id: 16,
+    path: "/sdg_icons/sdgs_icon_16.svg",
+    color: "#004D89",
     alt: "平和と公正をすべての人に",
   },
-  17: {
-    path: "/sdg_icons/sdg_icon_17.png",
-    color: "#19486A",
+  {
+    id: 17,
+    path: "/sdg_icons/sdgs_icon_17.svg",
+    color: "#023067",
     alt: "パートナーシップで目標を達成しよう",
   },
-};
+];
