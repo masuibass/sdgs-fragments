@@ -1,0 +1,15 @@
+projects:
+  sdgsfragments:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: lib/api.ts
+        docsFilePath: src/graphql
+extensions:
+  amplify:
+    version: 3
