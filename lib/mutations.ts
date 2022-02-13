@@ -1,10 +1,6 @@
 import { API, graphqlOperation } from "@aws-amplify/api";
 import { CardProps } from "../components/DraggableCard";
-import {
-  createCards,
-  deleteCards,
-  updateCards,
-} from "../src/graphql/mutations";
+import { createCards, deleteCards, updateCards } from "../graphql/mutations";
 
 export const createCardAsyncFunc = async (card: CardProps) => {
   try {

@@ -4,7 +4,7 @@ import { store } from "../app/store";
 import { Provider } from "react-redux";
 
 import { API } from "@aws-amplify/api";
-import awsConfig from "../src/aws-exports";
+import awsConfig from "../aws-exports";
 
 function MyApp({ Component, pageProps }: AppProps) {
   API.configure(awsConfig);

@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "sdgsfragments84e35e36": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d7joznegz9uce",
+          "type": "manual"
+        }
       }
     }
   }

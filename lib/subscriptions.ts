@@ -2,7 +2,7 @@ import {
   onCreateCards,
   onUpdateCards,
   onDeleteCards,
-} from "../src/graphql/subscriptions";
+} from "../graphql/subscriptions";
 import { API, graphqlOperation, GraphQLResult } from "@aws-amplify/api";
 import {
   OnCreateCardsSubscription,

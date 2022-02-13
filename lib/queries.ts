@@ -1,4 +1,4 @@
-import { listCards } from "../src/graphql/queries";
+import { listCards } from "../graphql/queries";
 import { API, GraphQLResult, graphqlOperation } from "@aws-amplify/api";
 import { ListCardsQuery } from "./api";
 import { CardProps } from "../components/DraggableCard";

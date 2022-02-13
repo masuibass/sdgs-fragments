@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { sdg_icons } from "../lib/def";
 
@@ -21,13 +21,14 @@ const Card: React.FC<CardEssentials> = ({ sdgs_goal_id, comment, author }) => {
         className="relative flex-grow-0 flex-shrink-0 w-full h-36"
         style={{ background: `${sdg_icons[sdgs_goal_id].color}` }}
       >
-        <Image
+        <img
           src={sdg_icons[sdgs_goal_id].path}
           alt={sdg_icons[sdgs_goal_id].alt}
-          layout="fill"
-          objectFit="cover"
+          // layout="fill"
+          // objectFit="cover"
           draggable="false"
-          priority={true}
+          // priority={true}
+          className="object-cover w-full h-full"
         />
       </div>
 
