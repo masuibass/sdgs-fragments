@@ -11,6 +11,7 @@ import {
   AiFillCaretLeft as LeftIcon,
   AiFillCaretRight as RightIcon,
 } from "react-icons/ai";
+import { createCardAsyncFunc } from "../lib/mutations";
 
 type Props = {
   visible: boolean;
@@ -29,18 +30,16 @@ const AddForm: React.FC<Props> = ({ visible, setVisible }) => {
   } = useForm<CardEssentials>({
     defaultValues: { sdgs_goal_id: 0, comment: "", author: "" },
   });
-  const dispatch = useAppDispatch();
-  const onSubmit = (cardEssentials: CardEssentials) => {
-    dispatch(
-      add({
-        id: uuidv4(),
-        position: {
-          x: Math.floor(Math.random() * 1000 - 500),
-          y: Math.floor(Math.random() * 700 - 350),
-        },
-        ...cardEssentials,
-      })
-    );
+  const onSubmit = async (cardEssentials: CardEssentials) => {
+    const card = {
+      id: uuidv4(),
+      position: {
+        x: Math.floor(Math.random() * 1000 - 500),
+        y: Math.floor(Math.random() * 700 - 350),
+      },
+      ...cardEssentials,
+    };
+    await createCardAsyncFunc(card);
     reset();
     setVisible(false);
   };

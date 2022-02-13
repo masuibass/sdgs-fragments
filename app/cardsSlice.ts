@@ -14,32 +14,7 @@ interface RemoveCardPayload {
   id: string;
 }
 
-const defaultCardsList: CardProps[] = [
-  {
-    id: "1e71cd67-6f7b-4ee2-9a9e-912cacf46e95",
-    sdgs_goal_id: 1,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    author: "author a",
-    position: { x: 0, y: 0 },
-  },
-  {
-    id: "e4825c89-ab6c-4159-add1-dca3af0d8dad",
-    sdgs_goal_id: 2,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    author: "author b",
-    position: { x: 200, y: 0 },
-  },
-  {
-    id: "60ec2636-d226-470a-9f3b-a951d43428d8",
-    sdgs_goal_id: 3,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    author: "author c",
-    position: { x: -200, y: 0 },
-  },
-];
+const defaultCardsList: CardProps[] = [];
 
 const initialState: CardsState = {
   list: defaultCardsList,
@@ -52,7 +27,7 @@ export const counterSlice = createSlice({
     add: (state, action: PayloadAction<CardProps>) => {
       state.list.push(action.payload);
     },
-    move: (state, action: PayloadAction<MoveCardPayload>) => {
+    drag: (state, action: PayloadAction<MoveCardPayload>) => {
       const { position, id } = action.payload;
       const targetCardIndex = state.list.findIndex((card) => card.id == id);
       state.list[targetCardIndex] = {
@@ -63,13 +38,26 @@ export const counterSlice = createSlice({
         },
       };
     },
+    update: (state, action: PayloadAction<CardProps>) => {
+      const targetCardIndex = state.list.findIndex(
+        (card) => card.id == action.payload.id
+      );
+      state.list[targetCardIndex] = {
+        ...state.list[targetCardIndex],
+        ...action.payload,
+      };
+    },
     remove: (state, action: PayloadAction<RemoveCardPayload>) => {
-      const { id } = action.payload;
-      const targetCardIndex = state.list.findIndex((card) => card.id == id);
+      const targetCardIndex = state.list.findIndex(
+        (card) => card.id == action.payload.id
+      );
       state.list.splice(targetCardIndex, 1);
+    },
+    init: (state, action: PayloadAction<CardProps[]>) => {
+      action.payload.length > 0 && (state.list = action.payload);
     },
   },
 });
 
-export const { add, move, remove } = counterSlice.actions;
+export const { add, drag, remove, init, update } = counterSlice.actions;
 export default counterSlice.reducer;
