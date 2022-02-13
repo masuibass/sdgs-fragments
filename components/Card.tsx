@@ -34,12 +34,12 @@ const Card: React.FC<CardEssentials> = ({ sdgs_goal_id, comment, author }) => {
 
       {/* Comment */}
       <div className="px-2 py-1">
-        <span className="text-sm line-clamp-10">{comment}</span>
+        <span className="text-sm line-clamp-10 palt">{comment}</span>
       </div>
 
       {/* Author */}
       <div className="p-1">
-        <span className="text-xs text-gray-400">{author}</span>
+        <span className="text-xs text-gray-400 palt">{author}</span>
       </div>
     </div>
   );
