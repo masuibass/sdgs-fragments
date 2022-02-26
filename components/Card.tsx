@@ -28,7 +28,7 @@ const Card: React.FC<CardEssentials> = ({ sdgs_goal_id, comment, author }) => {
           // objectFit="cover"
           draggable="false"
           // priority={true}
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full cursor-pointer"
         />
       </div>
 

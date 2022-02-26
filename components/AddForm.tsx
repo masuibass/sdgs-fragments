@@ -84,7 +84,7 @@ const AddForm: React.FC<Props> = ({ visible, setVisible }) => {
                 type="button"
                 onClick={() => {
                   if (watch("sdgs_goal_id") == sdg_icons.length - 1) return;
-                  setValue("sdgs_goal_id", getValues("sdgs_goal_id") + 1);
+                  setValue("sdgs_goal_id", getValues("sdgs_goal_id") - 0 + 1);
                 }}
               >
                 <RightIcon className="w-8 h-8 text-gray-600" />
@@ -152,7 +152,7 @@ const AddForm: React.FC<Props> = ({ visible, setVisible }) => {
         <div className="pt-6">
           <input
             type="submit"
-            className="px-4 py-2 text-white bg-[#009EDB] font-bold text-sm rounded-full shadow-lg"
+            className="px-4 cursor-pointer py-2 text-white bg-[#009EDB] font-bold text-sm rounded-full shadow-lg"
             value="タグを追加する"
           />
 
@@ -162,7 +162,7 @@ const AddForm: React.FC<Props> = ({ visible, setVisible }) => {
               reset();
               setVisible(false);
             }}
-            className="px-4 py-2 ml-2 text-sm border rounded-full shadow-lg"
+            className="px-4 py-2 ml-2 text-sm border rounded-full shadow-lg cursor-pointer"
             value="キャンセル"
           />
         </div>

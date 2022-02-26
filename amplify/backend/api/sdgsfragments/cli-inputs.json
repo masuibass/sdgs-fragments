@@ -7,7 +7,7 @@
     "defaultAuthType": {
       "mode": "API_KEY",
       "expirationTime": 7,
-      "apiKeyExpirationDate": "2022-02-20T08:55:29.896Z",
+      "apiKeyExpirationDate": "2022-03-01T00:29:41.066Z",
       "keyDescription": ""
     },
     "additionalAuthTypes": [
@@ -15,6 +15,7 @@
         "mode": "AMAZON_COGNITO_USER_POOLS",
         "cognitoUserPoolId": "authsdgsfragments84e35e36"
       }
-    ]
+    ],
+    "conflictResolution": {}
   }
 }
