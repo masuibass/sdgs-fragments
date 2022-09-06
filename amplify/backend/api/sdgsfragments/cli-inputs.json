@@ -3,11 +3,10 @@
   "serviceConfiguration": {
     "apiName": "sdgsfragments",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/Users/m-masui/repos/sdgs-fragments/amplify/backend/api/sdgsfragments/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7,
-      "apiKeyExpirationDate": "2022-03-01T00:29:41.066Z",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-09-06T01:54:47.045Z",
       "keyDescription": ""
     },
     "additionalAuthTypes": [
@@ -15,7 +14,6 @@
         "mode": "AMAZON_COGNITO_USER_POOLS",
         "cognitoUserPoolId": "authsdgsfragments84e35e36"
       }
-    ],
-    "conflictResolution": {}
+    ]
   }
 }

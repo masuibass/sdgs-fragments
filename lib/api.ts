@@ -137,6 +137,57 @@ export type ModelCardsConnection = {
   nextToken?: string | null,
 };
 
+export type ModelSubscriptionCardsFilterInput = {
+  id?: ModelSubscriptionIDInput | null,
+  author?: ModelSubscriptionStringInput | null,
+  comment?: ModelSubscriptionStringInput | null,
+  sdgs_goal_id?: ModelSubscriptionIntInput | null,
+  and?: Array< ModelSubscriptionCardsFilterInput | null > | null,
+  or?: Array< ModelSubscriptionCardsFilterInput | null > | null,
+};
+
+export type ModelSubscriptionIDInput = {
+  ne?: string | null,
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
+  notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  in?: Array< string | null > | null,
+  notIn?: Array< string | null > | null,
+};
+
+export type ModelSubscriptionStringInput = {
+  ne?: string | null,
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  contains?: string | null,
+  notContains?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+  in?: Array< string | null > | null,
+  notIn?: Array< string | null > | null,
+};
+
+export type ModelSubscriptionIntInput = {
+  ne?: number | null,
+  eq?: number | null,
+  le?: number | null,
+  lt?: number | null,
+  ge?: number | null,
+  gt?: number | null,
+  between?: Array< number | null > | null,
+  in?: Array< number | null > | null,
+  notIn?: Array< number | null > | null,
+};
+
 export type CreateCardsMutationVariables = {
   input: CreateCardsInput,
   condition?: ModelCardsConditionInput | null,
@@ -251,6 +302,10 @@ export type ListCardsQuery = {
   } | null,
 };
 
+export type OnCreateCardsSubscriptionVariables = {
+  filter?: ModelSubscriptionCardsFilterInput | null,
+};
+
 export type OnCreateCardsSubscription = {
   onCreateCards?:  {
     __typename: "Cards",
@@ -268,6 +323,10 @@ export type OnCreateCardsSubscription = {
   } | null,
 };
 
+export type OnUpdateCardsSubscriptionVariables = {
+  filter?: ModelSubscriptionCardsFilterInput | null,
+};
+
 export type OnUpdateCardsSubscription = {
   onUpdateCards?:  {
     __typename: "Cards",
@@ -283,6 +342,10 @@ export type OnUpdateCardsSubscription = {
     createdAt: string,
     updatedAt: string,
   } | null,
+};
+
+export type OnDeleteCardsSubscriptionVariables = {
+  filter?: ModelSubscriptionCardsFilterInput | null,
 };
 
 export type OnDeleteCardsSubscription = {

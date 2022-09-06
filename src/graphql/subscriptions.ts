@@ -3,8 +3,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateCards = /* GraphQL */ `
-  subscription OnCreateCards {
-    onCreateCards {
+  subscription OnCreateCards($filter: ModelSubscriptionCardsFilterInput) {
+    onCreateCards(filter: $filter) {
       id
       author
       comment
@@ -19,8 +19,8 @@ export const onCreateCards = /* GraphQL */ `
   }
 `;
 export const onUpdateCards = /* GraphQL */ `
-  subscription OnUpdateCards {
-    onUpdateCards {
+  subscription OnUpdateCards($filter: ModelSubscriptionCardsFilterInput) {
+    onUpdateCards(filter: $filter) {
       id
       author
       comment
@@ -35,8 +35,8 @@ export const onUpdateCards = /* GraphQL */ `
   }
 `;
 export const onDeleteCards = /* GraphQL */ `
-  subscription OnDeleteCards {
-    onDeleteCards {
+  subscription OnDeleteCards($filter: ModelSubscriptionCardsFilterInput) {
+    onDeleteCards(filter: $filter) {
       id
       author
       comment
